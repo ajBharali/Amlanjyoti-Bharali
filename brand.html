@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brand</title>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+          <!-- Bootstrap CSS -->
+         <!-- build:css css/main.css -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <link rel='stylesheet' href='styles.css' type='text/css' />
+        
+        <!--Google Platform Library-->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+        <!--To Specify Client ID-->
+        <meta name="google-signin-client_id" content="235481241571-le55mbm5o5q2efbo2rnv5puo57lpu14u.apps.googleusercontent.com.apps.googleusercontent.com">
+
+    </head>
+</html>
+<body>
+    <!--Facebook JavaScript SDK-->
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=380110219828582&autoLogAppEvents=1" nonce="LdDEJ7i1"></script>
+    
+<!-- For Setting Up the Facebook SDK for Javascript -->
+
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '258718028843750',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v8.0'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!--------------------------------------------------------------->
+    <div class="login-box">
+        <h3 style="text-align: center;">SIGN UP:</h3>
+        <h1 style="text-align: center;">Create your account</h1>
+        <p style="font-size: 13px; text-align: center;">Lorem Ipsum dolor sit amet consectetur adipiscing elit</p>
+        
+        
+        <form action="/login" method="POST">
+            <div class="social-login">
+
+                <!--For Facebook Plugin to appear-->
+                <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+
+                <!--For Google Plugin to appear-->
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </div>
+        
+        <div class="col">
+            <div class="hide-md-lg">
+                <hr>
+              <p class="or">Or</p>
+            </div>
+            
+            <div>
+                
+                <input type="text" id="First Name" class="form-control" placeholder="First Name" required="" autofocus="">
+            </div>
+            <div>
+                <input type="text" id="Last Name" class="form-control" placeholder="Last Name" required="" autofocus="">
+               
+            </div>
+                <div>
+                    <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+
+            </div>
+            <div>
+                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+            </div>
+            <p>By clicking Sign Up, you agree to our <a href="#" style="color:dodgerblue">Terms of use</a> and <a href="#" style="color:dodgerblue">Privacy Policy</a>.</p>
+            <button type="submit" class="btn" >SIGN UP</button>
+        </form>
+        
+    </div>
+</body>
